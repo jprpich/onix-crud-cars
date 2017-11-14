@@ -1,0 +1,20 @@
+<!-- <h1>index page</h1>
+<p>all cars should go here</p> -->
+<div class="container">
+  <div class="jumbotron" style="background-color: red;">
+    <h1>Welcome to the Car Jungle!</h1>
+    <p>This is an app created by the onix team!</p>
+  </div>
+  <ul>
+   <% @cars.each do |car| %>
+    <li><a href="/cars/<%= car.id %>"><%= car.brand %></a></li>
+  <% end %>
+  </ul>
+
+
+
+
+
+  <a href="/cars/new">Create New Car</a>
+  <a href="/">Go Back</a>
+</div>

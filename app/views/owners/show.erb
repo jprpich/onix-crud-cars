@@ -1,0 +1,10 @@
+<h2>These are <%= @owner.first_name %>'s Cars!</h2>
+
+
+<% @cars.each do |car| %>
+  <li><%= car.brand %></li>
+<% end %>
+
+<a href="/cars/new?owner_id=<%= @owner.id %>">Create New Car</a>
+
+<a href="/owners">Go Back</a>

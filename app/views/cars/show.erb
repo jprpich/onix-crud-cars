@@ -1,0 +1,14 @@
+<div class="container">
+<h1><%= @car.brand %></h1>
+<h2><%= @car.model %></h2>
+<img class="img-responsive" src="<%= @car.img_url %>">
+<br>
+<a href="/cars">Return</a>
+
+<a href="/cars/<%= @car.id %>/edit">Edit</a>
+
+<form action="/cars/<%= @car.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete">
+</form>
+</div>
